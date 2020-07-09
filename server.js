@@ -1,6 +1,9 @@
 const http = require('http');
 const server = http.createServer();
-const port = 4000;
+let port = process.env.PORT;
+if(port == null || port == "") {
+    port = 4000;
+}
 
 const url = require('url');
 
